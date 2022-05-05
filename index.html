@@ -1,20 +1,61 @@
 <!DOCTYPE html>
 
-<html lang>
+<html lang = "es">
 
     <head>
+
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Encryptador/Desencryptador</title>
+        <script src="js/decrypt.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&display=swap" rel="stylesheet">
+
     </head>
+
     <body>
-        <input placeholder="Type here your text" id="textInput">
-        <button onclick="textToEncrypt()">Encrypt</button>
-        <button onclick="textToDecrypt()">Decrypt</button>
-        <button onclick="copyToClipBoard()">Copy</button>
-        <textarea id="result"></textarea>
-        <textarea id="result2"></textarea>
-        <script src="js/main.js"></script>
+
+        <header>
+            
+            <img src="img/Logo.svg">
+
+        </header>
+
+        <main>
+
+            <section>
+
+
+                <textarea class="textInput" cols="40" rows="6" placeholder="Ingrese su Texto aquí"></textarea>
+
+                <h6>Solo letras minúsculas y sin acentos</h6>
+
+                <div>
+                    
+                    <button onclick="textToEncrypt()">Encrypt</button>
+
+                    <button onclick="textToDecrypt()">Decrypt</button>
+
+                </div>
+
+            </section>
+
+            <section>
+                
+                <textarea class="textResult" cols="18" rows="8"></textarea>
+
+                <div>
+                    
+                    <button onclick="copyToClipBoard()">Copy</button>   
+
+                </div>
+
+            </section>
+
+        </main>
 
     </body>
+
 </html>
