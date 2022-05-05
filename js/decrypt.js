@@ -1,9 +1,9 @@
 
 function textToDecrypt() {
 
-	const encryptedText = querySelector(".textInput");
+	const encryptedText = document.getElementById("textInput");
 
-	const resultText = querySelector(".textResult");
+	const resultText = document.getElementById("textResult");
 
 	const decryptedText = decrypt(encryptedText.value);
 
