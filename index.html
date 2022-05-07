@@ -1,62 +1,46 @@
 <!DOCTYPE html>
 
-<html lang = "es">
-
-    <head>
-
-        <meta charset="utf-8">
-        <title>Encryptador/Desencryptador</title>
-        <script src="js/encrypt.js"></script>
-        <script src="js/decrypt.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/reset.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&display=swap" rel="stylesheet">
-
-    </head>
-
-    <body>
-
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Encryptador/Desencryptador</title>
+    <script src="js/encrypt.js"></script>
+    <script src="js/decrypt.js"></script>
+    <script src="js/copy.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main class="wrap">
+      <div>
         <header>
-            
-            <img src="img/Logo.svg">
-
+          <img src="img/Logo.svg">
         </header>
-
-        <main>
-
-            <section>
-
-
-                <textarea id="textInput" cols="40" rows="6" placeholder="Ingrese su Texto aquí"></textarea>
-
-                <h6>Solo letras minúsculas y sin acentos</h6>
-
-                <div>
-                    
-                    <button onclick="textToEncrypt()">Encrypt</button>
-
-                    <button onclick="textToDecrypt()">Decrypt</button>
-
-                </div>
-
-            </section>
-
-            <section>
-                
-                <textarea id="textResult" cols="18" rows="8"></textarea>
-
-                <div>
-                    
-                    <button onclick="copyToClipBoard()">Copy</button>   
-
-                </div>
-
-            </section>
-
-        </main>
-
-    </body>
-
+        <section class="textarea-section">
+          <textarea id="textInput" placeholder="Ingrese su Texto aquí"></textarea>
+          <h6>Solo letras minúsculas y sin acentos</h6>
+          <div class="action-buttons">
+              <button id="encrypt" class="btn btn-primary" onclick="textToEncrypt()">Encrypt</button>
+              <button id="decrypt" class="btn btn-secondary" onclick="textToDecrypt()">Decrypt</button>
+          </div>
+        </section>
+      </div>
+      <aside>
+        <div class="first">
+          <img src="./img/person.png" alt="Person" />
+          <p>Ningún mensaje fue encontrado</p>
+          <small>Ingresar el texto que desees encriptar o desencriptar</small>
+        </div>
+        <div class="second hidden">
+          <textarea id="textResult"></textarea>
+          <div class="copy">
+              <button id="copy-button" class="btn btn-secondary" onclick="copyToClipBoard()">Copy</button>   
+          </div>
+        </div>
+      </aside>
+    </main>
+  </body>
 </html>
