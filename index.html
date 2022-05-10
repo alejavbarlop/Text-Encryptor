@@ -7,7 +7,6 @@
     <script src="js/encrypt.js"></script>
     <script src="js/decrypt.js"></script>
     <script src="js/copy.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +21,7 @@
         <section class="textarea-section">
           <textarea id="textInput" placeholder="Ingrese su Texto aquí"></textarea>
           <h6>Solo letras minúsculas y sin acentos</h6>
+          <img id="vector" src="img/vector.png" alt="vector">
           <div class="action-buttons">
               <button id="encrypt" class="btn btn-primary" onclick="textToEncrypt()">Encrypt</button>
               <button id="decrypt" class="btn btn-secondary" onclick="textToDecrypt()">Decrypt</button>
@@ -30,7 +30,7 @@
       </div>
       <aside>
         <div class="first">
-          <img src="./img/person.png" alt="Person" />
+          <img src="./img/person.png" alt="Person"/>
           <p>Ningún mensaje fue encontrado</p>
           <small>Ingresar el texto que desees encriptar o desencriptar</small>
         </div>

@@ -1,11 +1,9 @@
 function copyToClipBoard() {
 
-		var content = document.getElementById("result");
+    var content = document.getElementById("textResult");
+    
+    content.select();
+    document.execCommand('copy');
 
-		content.select();
-
-		document.execCommand("Copy");
-
-		alert("Infomación Copiada con Exito");
-
+    alert("Copied!");
 }

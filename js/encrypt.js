@@ -10,6 +10,10 @@ function textToEncrypt() {
 	}
 
 	document.getElementById("textResult").innerHTML = textContainer;
+
+	document.querySelector(".first").style.display = "none";
+
+	document.querySelector(".second").style.display = "flex";
 }
 
 function encrypt(letters) {
