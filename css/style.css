@@ -23,8 +23,18 @@ header {
 	padding: 16px;
 }
 
+section {
+	position: relative;
+}
+
 section h6 {
 	padding-left: 15px;
+}
+
+section img {
+	position: relative;
+	left: 0px;
+	bottom: 17px;
 }
 
 .wrap {
