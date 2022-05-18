@@ -1,47 +1,31 @@
-function textToEncrypt() {
+function textToEncrypt() { // Funtion to read the textInput and to direct the result to textResult and then to contain the string, then 2
 
-	var normalText = document.getElementById("textInput").value;
+	const normalText = document.getElementById("textInput");
 
-	var textContainer = "";
+	const resultText = document.getElementById("textResult");
 
-	for (i = 0; i < normalText.length; i++) {
+	const encryptedText = encrypt(normalText.value);
 
-		textContainer += encrypt(normalText[i]);
-	}
-
-	document.getElementById("textResult").innerHTML = textContainer;
+	resultText.value = encryptedText;
 
 	document.querySelector(".first").style.display = "none";
 
 	document.querySelector(".second").style.display = "flex";
 }
 
-function encrypt(letters) {
+function encrypt(words) { // Funtion to change each letter of the string with the selecction of the matrix to be replaced.
 
-	switch (letters) {
+	let matrixCode = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u", "ufat"]];
 
-		case "e":
-			return "enter";
-			break;
+	words = words.toLowerCase();
 
-		case "i":
-			return "imes";
-			break;
+	for (let i=0; i < matrixCode.length; i++) {
 
-		case "a":
-			return "ai";
-			break;
+		if(words.includes(matrixCode[i][0])){
 
-		case "o":
-			return "ober";
-			break;
-
-		case "u":
-			return "ufat";
-			break;
-
-		case letters:
-			return letters;
-			break;
+			words = words.replaceAll(matrixCode[i][0],matrixCode[i][1]);
+		}
 	}
+
+	return words;
 }

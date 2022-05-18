@@ -1,5 +1,5 @@
 
-function textToDecrypt() {
+function textToDecrypt() { // Funtion to read the textarea(textInput) and to direct the resulto to textarea(textResult) and then to contain the string
 
 	const encryptedText = document.getElementById("textInput");
 
@@ -10,7 +10,7 @@ function textToDecrypt() {
 	resultText.value = decryptedText;
 }
 
-function decrypt(words) {
+function decrypt(words) { // Funtion to change each letter of the string with the selecction of the matrix to be replaced.
 
 	let matrixCode = [["enter", "e"],["imes", "i"],["ai", "a"],["ober", "o"],["ufat","u"]];
 
